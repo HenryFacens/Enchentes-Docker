@@ -1,15 +1,23 @@
+FROM python:3.8
+
+RUN apt-get update
+
+WORKDIR /horta
+
+COPY ./ .
+
+
+
 FROM python:3.9
 
-RUN apt-get update \
-    && apt-get install -y unixodbc-dev build-essential libssl-dev libffi-dev python3-dev
+RUN apt-get update
 
-WORKDIR /app
+WORKDIR /tcc
 
-
-COPY . .
+COPY ./ .
 
 RUN pip install requests
 RUN pip install paho-mqtt
 RUN pip install schedule
 
-CMD [ "python", "tcc.py" ]
+CMD [ "python", "./tcc.py" ]
