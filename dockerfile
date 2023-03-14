@@ -12,4 +12,4 @@ RUN pip install requests
 RUN pip install paho-mqtt
 RUN pip install schedule
 
-CMD [ "python", "./tcc.py" ]
+CMD [ "python", "/tcc.py" ]
