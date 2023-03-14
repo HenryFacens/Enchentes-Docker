@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: tcc-enchentes
 
 on:
   push:
